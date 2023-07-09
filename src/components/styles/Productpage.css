@@ -1,0 +1,140 @@
+.ProductMain{
+    width: 80%;
+    height: 100vh;
+    background-color: red;
+    display: grid;
+    grid-template-rows: 10% 80%;
+    row-gap: 5%;
+}
+.topbar{
+    background-color: blue;
+    display: grid;
+    grid-template-columns:20% 50% 30%;
+    align-items: center;
+}
+.Logo{
+    height: 100%;
+    background-color: yellowgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.TopNavLeft{
+    height: 100%;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+.TopNavLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+a{
+text-decoration: none;
+font-size: 20px;
+}
+.TopNavRight{
+    height: 100%;
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 16% 16%;
+    justify-content: right;
+    align-items: center;
+    column-gap: 5%;
+}
+.CartLogo{
+    height: 80%;
+    background-color: lightgray;
+    border-radius: 100%;
+}
+.ProfilePic{
+    height: 80%;
+    background-color: lightcoral;
+    border-radius: 100%;
+
+}
+.MainContent{
+    background-color: green;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.ItemImage{
+    background-color: beige;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+.Imge{
+    background-color: brown;
+}
+.Popup{
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15%;
+    column-gap: 5%;
+    justify-content: center;
+    align-items: center;
+}
+.PopupImg{
+    height: 60%;
+    background-color: red;
+}
+.ItemDetails{
+    background-color: purple;
+    display: grid;
+    grid-template-rows: 65% 20%;
+    padding-top: 70px;
+}
+.ItemDesc{
+    height: 100%;
+    background-color: lightblue;
+    display: flex;
+    justify-content: left;
+}
+.AddToCart{
+    height: 100%;
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: 30% 40%;
+    column-gap: 1%;
+    justify-content: left;
+    align-items: center;
+}
+.Inc_DecItems{
+    background-color: darkblue;
+    height: 60%;
+    display: grid;
+    grid-template-columns: 23% 48% 23%;
+    align-items: center;
+    justify-content: center;
+}
+.Increment{
+    height: 60%;
+background-color: darkmagenta;
+}
+.Decrement{
+    height: 60%;
+background-color: lightyellow;
+}
+.Amount{
+    height: 60%;
+    background-color: aqua;
+}
+.AddToCartBtn{
+    background-color: darkgoldenrod;
+    height: 60%;
+    display: flex;
+    align-items: center;
+}
+.AddToCartBtn button{
+    height: 60%;
+    width: 60%;
+    background-color: white;
+    border: none;
+}
+.AddToCartBtn button:hover{
+    cursor: pointer;
+}
