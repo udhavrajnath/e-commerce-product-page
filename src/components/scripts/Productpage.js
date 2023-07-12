@@ -1,7 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../styles/Productpage.css"
 
-function Productpage() {
+function Productpage(e) {
+  const [ItemAmount,SetAmount]=useState(0)
+  const [ItemsSelected,setItemsSelected]=useState([])
+
+  function UpdateCart(e){
+    let tempArr=[...ItemsSelected]
+
+    if(e.target.checked==true){
+      if(ItemsSelected.includes(e.target.value)==false){
+        tempArr=[...ItemsSelected,e.target.value]
+      }
+    }
+    else{
+      if(ItemsSelected.includes(e.target.value)==true){
+        tempArr.splice(tempArr.indexOf(e.target.value),1)
+      }
+    }   
+    setItemsSelected(tempArr)
+  }
+  
+
+  function UpdateItemNumber(e){
+    if(e=='inc'){
+      SetAmount(ItemAmount+1)
+    }
+    else if(e=='dec'&& ItemAmount>0){
+      SetAmount(ItemAmount-1)
+    }else if(ItemAmount==0&&e=='dec'){
+      SetAmount(0)
+    }
+  }
+
   return (
     <div className='ProductMain'>
       <div className='topbar'>
@@ -30,12 +61,17 @@ function Productpage() {
           </div>
         </div>
         <div className='ItemDetails'>
-          <div className='ItemDesc'></div>
+          <div className='ItemDesc'>
+          <label><input type='checkbox' value='dog' onChange={(e)=>UpdateCart(e)}/>Dog</label>
+          <label><input type='checkbox' value='cat' onChange={(e)=>UpdateCart(e)}></input>Cat</label>
+          <label><input type='checkbox' value='duck'onChange={(e)=>UpdateCart(e)}></input>Duck</label><br/>
+          {ItemsSelected}
+          </div>
           <div className='AddToCart'>
             <div className='Inc_DecItems'>
-              <div className='Decrement'></div>
-              <div className='Amount'></div>
-              <div className='Increment'></div>
+              <div className='Decrement'><button value={'dec'} onClick={(e)=>UpdateItemNumber(e.target.value)}>-</button></div>
+              <div className='Amount'>{ItemAmount}</div>
+              <div className='Increment'><button value={'inc'} onClick={(e)=>UpdateItemNumber(e.target.value)}>+</button></div>
             </div>
             <div className='AddToCartBtn'><button>Add To Cart</button></div>
           </div>
